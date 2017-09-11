@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+<head>
+    <meta charset="UTF-8">
+    <title>angular-scope作用域</title>
+</head>
+<body>
+<div>
+    <div>绑定案例</div>
+    <div ng-controller="myCtrl">
+        <drink flavor="{{ctrlFlavor}}"></drink>
+        <!--此处传递的是字符串需要{{}}-->
+    </div>
+
+    <div>双向绑定案例</div>
+    <div ng-controller="myCtrl">
+        Ctrl:外部作用域
+        <br>
+        <input type="text" ng-model="ctrlFlavor"/>
+        <br>
+        Directive:
+        <br>
+        <bang flavor="ctrlFlavor"></bang>
+        <!--使用=时是双向数据绑定，因此此处的获取直接写参数名即可-->
+    </div>
+    <br><br>
+    <div>获取方法</div>
+    <div ng-controller="myCtrl">
+        <!--当使用&时，greet获取的是外部控制器暴露给外部的函数，可以随时使用，只需调用函数名即可-->
+        <greeting greet="sayHello(name)"></greeting>
+        <greeting greet="sayHello(name)"></greeting>
+        <greeting greet="sayHello(name)"></greeting>
+    </div>
+</div>
+</body>
+<script src="../lib/angular.js"></script>
+<script src="angular_scope.js"></script>
+</html>

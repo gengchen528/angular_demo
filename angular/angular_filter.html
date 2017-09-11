@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+<head>
+    <meta charset="UTF-8">
+    <title>多级筛选（angular自定义过滤器）</title>
+    <script type="text/javascript" src="../lib/angular.js"></script>
+    <script type="text/javascript" src="angular_filter.js"></script>
+</head>
+<body>
+<div ng-controller="filter">
+<div>
+    <a ng-click="showType('')">全部分类</a>
+    <a ng-click="showType(item.type)" ng-repeat="item in dataList" ng-bind="item.type" style="margin-left: 20px;"></a>
+</div>
+    <div>
+        <a href="" ng-click="showPrice()">所有价格</a>
+        <!--<a ng-click="showPrice(item.price)" ng-repeat="item in dataList" ng-bind="item.price"></a>-->
+        <a  ng-click="showPrice(50)" > 大于50元</a>
+    </div>
+    <ul>
+        <li ng-repeat="item in dataList | filter1:filterType:filterPrice">
+            <a href="#" ng-bind="item.titile"></a>
+            <span ng-bind="item.price"></span>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

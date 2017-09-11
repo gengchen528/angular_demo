@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+<head>
+    <meta charset="UTF-8">
+    <title>angular-scope</title>
+</head>
+<body>
+<div ng-controller="myCtrl">
+    <expander class="expander" expander-title="title">{{text}}</expander>
+</div>
+<div ng-controller="myCtrl2">
+    <input type="text" ng-model="num">
+    <span>{{count}}</span>
+    <button ng-click="double()">计算</button>
+</div>
+<div ng-controller="select">
+    <form >
+        <input type="radio" value="week" ng-model="time">周
+        <input type="radio" value="month" ng-model="time">月
+        <input type="radio" value="day" ng-model="time">天
+    </form>
+    <div ng-switch="time">
+        <div ng-switch-when="week" >本周{{nameMap.newVisitor}}</div>
+        <div ng-switch-when='day' >今天{{nameMap.newVisitor}}</div>
+        <div ng-switch-when='month' >本月{{nameMap.newVisitor}}</div>
+    </div>
+</div>
+</body>
+<script src="../lib/angular.js"></script>
+<script src="angular_directive_self.js"></script>
+</html>

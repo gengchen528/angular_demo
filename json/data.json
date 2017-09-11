@@ -1,0 +1,12 @@
+{ "code": 1, "msg": "成功",
+  "data": {
+    "list": [
+      { "titile": "欢乐谷特惠门票", "price": 47.0, "type": "成人票", "id": 3 },
+      { "titile": "欢乐谷夜场票", "price": 55.0, "type": "夜场票", "id": 2 },
+      { "titile": "欢乐谷特惠儿童票", "price": 45.0, "type": "儿童票", "id": 1 },
+      { "titile": "欢乐谷日场票", "price": 45.0, "type": "日场票", "id": 4 },
+      { "titile": "欢乐谷日场票", "price": 70.0, "type": "日场票", "id": 4 },
+      { "titile": "欢乐谷日场票", "price": 80.0, "type": "日场票", "id": 4 }
+    ],
+    "business_name": "成都欢乐谷"
+  } }
