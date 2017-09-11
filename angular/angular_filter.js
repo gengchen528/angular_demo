@@ -33,4 +33,20 @@ myMoudle.filter('filter1',function () {
         });
         return result;
     }
+});
+// 去除重复数据接口
+// @ keyname:需要去重的项，字符接收注意在页面上使用 例： unique:'type'
+// @ collection: 数据对象
+myMoudle.filter('unique',function () {
+    return function (collection,keyname) {
+        var output=[],keys=[];
+        angular.forEach(collection,function (item) {
+            var key = item[keyname];
+            if(keys.indexOf(key)===-1){//对比是否多次存在，如果不存在就加入数组，代表唯一存在
+                keys.push(key);
+                output.push(item);
+            }
+        });
+        return output;
+    }
 })

@@ -10,7 +10,7 @@
 <div ng-controller="filter">
 <div>
     <a ng-click="showType('')">全部分类</a>
-    <a ng-click="showType(item.type)" ng-repeat="item in dataList" ng-bind="item.type" style="margin-left: 20px;"></a>
+    <a ng-click="showType(item.type)" ng-repeat="item in dataList | unique:'type'" ng-bind="item.type" style="margin-left: 20px;"></a>
 </div>
     <div>
         <a href="" ng-click="showPrice()">所有价格</a>
