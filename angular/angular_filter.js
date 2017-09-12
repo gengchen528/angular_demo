@@ -7,6 +7,7 @@ myMoudle.controller('filter',function ($scope,$http) {
             $scope.filterPrice;
             $scope.showType=function (type) {
                 $scope.filterType=type;
+                $scope.active=true;
             };
             $scope.showPrice=function (price) {
                 $scope.filterPrice=price;

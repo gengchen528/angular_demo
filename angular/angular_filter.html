@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>多级筛选（angular自定义过滤器）</title>
+    <script type="text/javascript" src="../lib/jquery-1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../lib/bootsrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="../lib/bootsrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../lib/angular.js"></script>
     <script type="text/javascript" src="angular_filter.js"></script>
 </head>
 <body>
-<div ng-controller="filter">
-<div>
-    <a ng-click="showType('')">全部分类</a>
-    <a ng-click="showType(item.type)" ng-repeat="item in dataList | unique:'type'" ng-bind="item.type" style="margin-left: 20px;"></a>
-</div>
-    <div>
-        <a href="" ng-click="showPrice()">所有价格</a>
+<div ng-controller="filter" class="container">
+    <p class="text-center">多级筛选方案</p>
+    <div class="row">
+        <a ng-click="showType('')" class="btn btn-group">全部分类</a>
+        <a class="btn btn-default" ng-class="{true: 'active'}[active]" ng-click="showType(item.type,$index)" ng-repeat="item in dataList | unique:'type'"
+           ng-bind="item.type" style="margin-left: 20px;"></a>
+    </div>
+    <div class="row">
+        <a href="" ng-click="showPrice()" class="btn btn-group">所有价格</a>
         <!--<a ng-click="showPrice(item.price)" ng-repeat="item in dataList" ng-bind="item.price"></a>-->
-        <a  ng-click="showPrice(50)" > 大于50元</a>
+        <a ng-click="showPrice(50)" class="btn btn-default"> 大于50元</a>
     </div>
     <ul>
         <li ng-repeat="item in dataList | filter1:filterType:filterPrice">
