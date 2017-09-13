@@ -5,12 +5,21 @@
     <title>多级筛选（angular自定义过滤器）</title>
     <script type="text/javascript" src="../lib/jquery-1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../lib/bootsrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/week_time/kalendae.css">
     <script type="text/javascript" src="../lib/bootsrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../lib/angular.js"></script>
+    <script type="text/javascript" src="../lib/week_time/kalendae.standalone.js"></script>
+
+    <!--<script type="text/javascript" src="../lib/My97DatePicker/WdatePicker.js"></script>-->
     <script type="text/javascript" src="angular_filter.js"></script>
+
 </head>
 <body>
 <div ng-controller="filter" class="container">
+    <div class="auto-kal" data-kal="mode:'multiple'"></div>>
+    <div id="time" style="with:100%"></div>
+    <!--<input type="text" class="Wdate" id="d122" ng-click="onpicked()"  />-->
+    你选择了第：<input type="text" id="d122_1" size="3">周
     <p class="text-center">多级筛选方案</p>
     <div class="row">
         <a ng-click="showType('')" class="btn btn-group">全部分类</a>
@@ -29,5 +38,16 @@
         </li>
     </ul>
 </div>
+<script>
+    new Kalendae(document.getElementById("time"), {
+        months:1,
+        mode:'multiple',
+        subscribe: {
+            'date-clicked': function (date) {
+                console.log(date._i, this.getSelected());
+            }
+        }
+    });
+</script>
 </body>
 </html>
