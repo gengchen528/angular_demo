@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>echarts地图引入</title>
+    <script type="text/javascript" src="../lib/echarts.js"></script>
+    <script type="text/javascript" src="../lib/echarts_map/china.js"></script>
+</head>
+<body>
+<div id="china" style="width: 800px;height: 500px;margin:30px auto;"></div>
+<script>
+    var chart = echarts.init(document.getElementById('china'));
+    var str = '中国地图'
+    chart.setOption({
+        text:str,
+        series: [{
+            type: 'map',
+            map: 'china',
+            label: {
+                normal: {
+                    show: true,//显示省份标签
+                    textStyle:{color:"#c71585"}//省份标签字体颜色
+                },
+                emphasis: {//对应的鼠标悬浮效果
+                    show: true,
+                    textStyle:{color:"#800080"}
+                }
+            },
+            itemStyle: {
+                normal: {
+                    borderWidth: .5,//区域边框宽度
+                    borderColor: '#009fe8',//区域边框颜色
+                    areaColor:"#ffefd5",//区域颜色
+                },
+                emphasis: {
+                    borderWidth: .5,
+                    borderColor: '#4b0082',
+                    areaColor:"#ffdead",
+                }
+            }
+        }]
+    });
+</script>
+</body>
+</html>
