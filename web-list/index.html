@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>收藏网页列表</title>
+    <script type="text/javascript" src="./lib/jquery-1.11.1/jquery.js"></script>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./lib/angular/angular.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+</head>
+<body ng-app="myApp">
+<div class="page-header">收集的网页大全</div>
+<div ng-controller="ctrl" class="container">
+    <div class="list-group" ng-repeat="(x,y) in data">
+        <div>{{x}}</div>
+        <div ng-repeat="item in y">
+            <a href="{{item.url}}">{{item.name}}</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
