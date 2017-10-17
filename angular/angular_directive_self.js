@@ -24,7 +24,12 @@ myModule.controller('myCtrl2',['$scope',function ($scope) {
     $scope.double = function () {
         return  this.count=this.num*2
     }
-}])
+}]);
+myModule.controller('myClick',['$scope',function ($scope) {
+    $scope.saveTip=function () {
+        return '<div>hello</div>>'
+    }
+}]);
 myModule.directive('expander',function () {
     return {
         restrict:'AE',
