@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d733a59-bb6b-48ad-9443-1c4655698cb7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angularForm/angular_form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angularForm/angular_form.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/self_lib/self_lib.js" afterPath="$PROJECT_DIR$/selfLlib/self_lib.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.ignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angularForm/angular_form.html" afterPath="$PROJECT_DIR$/angularForm/angular_form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selfLlib/self_lib.js" afterPath="$PROJECT_DIR$/selfLlib/self_lib.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +17,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="angular_form.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="angular_form.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angularForm/angular_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="34" column="17" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="34" selection-end-column="17" />
+            <state relative-caret-position="154">
+              <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="self_lib.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/selfLlib/self_lib.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="188" column="43" lean-forward="false" selection-start-line="188" selection-start-column="43" selection-end-line="188" selection-end-column="43" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".ignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.ignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -41,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/angular/angular_time.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="9196">
-              <caret line="418" column="33" lean-forward="true" selection-start-line="418" selection-start-column="33" selection-end-line="418" selection-end-column="33" />
+              <caret line="418" column="33" lean-forward="false" selection-start-line="418" selection-start-column="33" selection-end-line="418" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -90,8 +112,10 @@
         <option value="$PROJECT_DIR$/angular/angular_directive_self.html" />
         <option value="$PROJECT_DIR$/angular/angular_directive_self.js" />
         <option value="$PROJECT_DIR$/self_lib/self_lib.js" />
-        <option value="$PROJECT_DIR$/angularForm/angular_form.html" />
         <option value="$PROJECT_DIR$/angularForm/angular_form.js" />
+        <option value="$PROJECT_DIR$/angularForm/angular_form.html" />
+        <option value="$PROJECT_DIR$/selfLlib/self_lib.js" />
+        <option value="$PROJECT_DIR$/.ignore" />
       </list>
     </option>
   </component>
@@ -130,11 +154,6 @@
             <path>
               <item name="angular_demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="angular_demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="angular_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="angular_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="selfLlib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -273,12 +292,12 @@
       <workItem from="1508206334550" duration="4321000" />
       <workItem from="1508747282204" duration="1235000" />
       <workItem from="1509507497924" duration="3373000" />
-      <workItem from="1509589607260" duration="27000" />
+      <workItem from="1509589607260" duration="779000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21160000" />
+    <option name="totallyTimeSpent" value="21912000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="0" />
@@ -333,13 +352,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/angular/angular_directive_self.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/angular_scope.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
@@ -638,13 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/selfLlib/self_lib.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-list/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -663,7 +668,7 @@
     <entry file="file://$PROJECT_DIR$/angular/angular_time.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9196">
-          <caret line="418" column="33" lean-forward="true" selection-start-line="418" selection-start-column="33" selection-end-line="418" selection-end-column="33" />
+          <caret line="418" column="33" lean-forward="false" selection-start-line="418" selection-start-column="33" selection-end-line="418" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -693,8 +698,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/angularForm/angular_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="34" column="17" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="34" selection-end-column="17" />
+        <state relative-caret-position="154">
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selfLlib/self_lib.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="188" column="43" lean-forward="false" selection-start-line="188" selection-start-column="43" selection-end-line="188" selection-end-column="43" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.ignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
           <folding />
         </state>
       </provider>
