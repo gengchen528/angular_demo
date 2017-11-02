@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>angular-directive</title>
+    <style>
+        .disable{
+            display: ;
+        }
+    </style>
+</head>
+<body>
+    <!--<div ng-controller="myCtrl">-->
+    <!--<loader howToLoad="loadData()"> 滑动加载</loader>-->
+    <!--</div>-->
+    <!--<div ng-controller="myCtrl2">-->
+        <!--<loader howToLoad="loadData2()"> 滑动加载第二个</loader>-->
+    <!--</div>-->
+    <div ng-controller="myCtrl">
+        <table class="footable table " data-page-size="8" >
+            <thead>
+            <tr>
+                <th  class="footable-first-column ">用户分群名称</th>
+                <th  >分群用户数 </th>
+                <th  data-sorted="false">操作 </th>
+            </tr>
+            </thead>
+            <tbody >
+            <tr ng-repeat="item in user" >
+                <td class="footable-visible">{{item.id}}</td>
+                <td class="footable-visible">{{item.name}}</td>
+                <td>
+                    <button id="{{item.id}}" type="button" class="btn btn-info btn-sm"  ng-click="chose(item.id,item.name)">选择</button>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+<script src="../lib/angular.js"></script>
+<script src="../lib/jquery-1.11.1/jquery.min.js"></script>
+<script src="angular_form.js"></script>
+</html>
