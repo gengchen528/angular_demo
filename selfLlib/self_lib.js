@@ -70,8 +70,8 @@ unique1 = function(){
 
 //二、处理浏览器兼容性问题
 
-//2.1 处理IE6-IE8不兼容forEach()与map()遍历
 /**
+ * 2.1 处理IE6-IE8不兼容forEach()与map()遍历
  * forEach遍历数组
  * @param callback [function] 回调函数；
  * @param context [object] 上下文；
@@ -88,7 +88,7 @@ Array.prototype.myForEach = function myForEach(callback,context){
 
 };
 /**
- * map遍历数组
+ * 2.2 map遍历数组
  * @param callback [function] 回调函数；
  * @param context [object] 上下文；
  */
