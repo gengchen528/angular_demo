@@ -238,3 +238,39 @@ Array.prototype.myMap = function myMap(callback,context){
             entry = new Object();
         }
     }
+    /**
+     *  4.2 input限制输入框输入字符数为中文2个字符，英文1个字符
+     *  maxCodeLength
+     *  输入框文字长度限制
+     *  使用方式： <input type='text' maxcodelength="60"/>
+     *  @maxcodelength  字符长度，中文两个字符，英文一个字符
+     */
+
+    function maxCodeLength() {
+        $('input[type="text"]').on('input', function (e) {
+            var $that =  $(this);
+            var  limitLen = $that .attr("maxcodelength")                      //定义所需字节数
+            $that.attr('maxlength',limitLen);
+            setTimeout(function(){
+                var value =  $that.val(),
+                    reg = /[\u4e00-\u9fa5]{1}/g,             //中文
+                    notReg = /\w{1}/g;                      //非中文
+                var resultCn = value.match(reg);
+                var resultEn = value.match(notReg);
+                if(resultCn){
+                    limitLen = limitLen - (resultCn.length*2);
+                }
+                if(resultEn){
+
+                    limitLen = limitLen - resultEn.length;
+                }
+                if(limitLen<=0){
+                    var finalLen = value.length+limitLen;
+                    value = value.substring(0,finalLen);
+                    $that.attr('maxlength',limitLen);
+                    $that[0].value = value;
+                }
+            },0);
+
+        });
+    }
