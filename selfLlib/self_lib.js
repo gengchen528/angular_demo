@@ -177,17 +177,17 @@
  * @param context [object] 上下文；
  */
 Array.prototype.myForEach = function myForEach(callback, context) {
-    context = context || window;
-    if ('forEach' in Array.prototye) {
-        this.forEach(callback, context);
-        return;
-    }
-    //IE6-8下自己编写回调函数执行的逻辑
-    for (var i = 0, len = this.length; i < len; i++) {
-        callback && callback.call(context, this[i], i, this);
+	context = context || window;
+	if ('forEach' in Array.prototye) {
+		this.forEach(callback, context);
+		return;
+	}
+	//IE6-8下自己编写回调函数执行的逻辑
+	for (var i = 0, len = this.length; i < len; i++) {
+		callback && callback.call(context, this[i], i, this);
 
-    }
-    ;
+	}
+};
     /**
      * 2.2 map遍历数组
      * @param callback [function] 回调函数；
@@ -214,26 +214,26 @@ Array.prototype.myForEach = function myForEach(callback, context) {
      * @name getExplore
      * @return {String}
      */
-    function getExplore() {
-        var sys = {},
-            ua = navigator.userAgent.toLowerCase(),
-            s;
-        (s = ua.match(/rv:([\d.]+)\) like gecko/)) ? sys.ie = s[1]:
-            (s = ua.match(/msie ([\d\.]+)/)) ? sys.ie = s[1] :
-                (s = ua.match(/edge\/([\d\.]+)/)) ? sys.edge = s[1] :
-                    (s = ua.match(/firefox\/([\d\.]+)/)) ? sys.firefox = s[1] :
-                        (s = ua.match(/(?:opera|opr).([\d\.]+)/)) ? sys.opera = s[1] :
-                            (s = ua.match(/chrome\/([\d\.]+)/)) ? sys.chrome = s[1] :
-                                (s = ua.match(/version\/([\d\.]+).*safari/)) ? sys.safari = s[1] : 0;
-        // 根据关系进行判断
-        if (sys.ie) return ('IE: ' + sys.ie)
-        if (sys.edge) return ('EDGE: ' + sys.edge)
-        if (sys.firefox) return ('Firefox: ' + sys.firefox)
-        if (sys.chrome) return ('Chrome: ' + sys.chrome)
-        if (sys.opera) return ('Opera: ' + sys.opera)
-        if (sys.safari) return ('Safari: ' + sys.safari)
-        return 'Unkonwn'
-    }
+	function getExplore() {
+		var sys = {},
+			ua = navigator.userAgent.toLowerCase(),
+			s;
+		(s = ua.match(/rv:([\d.]+)\) like gecko/)) ? sys.ie = s[1] :
+			(s = ua.match(/msie ([\d\.]+)/)) ? sys.ie = s[1] :
+				(s = ua.match(/edge\/([\d\.]+)/)) ? sys.edge = s[1] :
+					(s = ua.match(/firefox\/([\d\.]+)/)) ? sys.firefox = s[1] :
+						(s = ua.match(/(?:opera|opr).([\d\.]+)/)) ? sys.opera = s[1] :
+							(s = ua.match(/chrome\/([\d\.]+)/)) ? sys.chrome = s[1] :
+								(s = ua.match(/version\/([\d\.]+).*safari/)) ? sys.safari = s[1] : 0;
+		// 根据关系进行判断
+		if (sys.ie) return ('IE: ' + sys.ie)
+		if (sys.edge) return ('EDGE: ' + sys.edge)
+		if (sys.firefox) return ('Firefox: ' + sys.firefox)
+		if (sys.chrome) return ('Chrome: ' + sys.chrome)
+		if (sys.opera) return ('Opera: ' + sys.opera)
+		if (sys.safari) return ('Safari: ' + sys.safari)
+		return 'Unkonwn'
+	}
     /**
      *
      * @desc 2.4 获取操作系统类型
